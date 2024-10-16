@@ -6,6 +6,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Hide unit content initially */
+			.unit-content {
+				display: none;
+			}
+		</style>
+		<script>
+			// Function to show specific unit and hide others
+			function showUnit(unitId) {
+				// Hide all units
+				var units = document.getElementsByClassName('unit-content');
+				for (var i = 0; i < units.length; i++) {
+					units[i].style.display = 'none';
+				}
+				// Show the selected unit
+				document.getElementById(unitId).style.display = 'block';
+			}
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -24,13 +42,13 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="#unit1">Unit 1: Introduction to Machine Learning</a></li>
-					<li><a href="#unit2">Unit 2: Exploratory Data Analysis</a></li>
-					<li><a href="#unit3">Unit 3: Correlation and Regression</a></li>
-					<li><a href="#unit4">Unit 4: Linear Regression with Scikit-Learn</a></li>
-					<li><a href="#unit5">Unit 5: Clustering</a></li>
-					<li><a href="#unit6">Unit 6: Artificial Neural Networks</a></li>
-					<li><a href="#unit7">Unit 7: Convolutional Neural Networks</a></li>
+					<li><a href="javascript:void(0)" onclick="showUnit('unit1')">Unit 1: Introduction to Machine Learning</a></li>
+					<li><a href="javascript:void(0)" onclick="showUnit('unit2')">Unit 2: Exploratory Data Analysis</a></li>
+					<li><a href="javascript:void(0)" onclick="showUnit('unit3')">Unit 3: Correlation and Regression</a></li>
+					<li><a href="javascript:void(0)" onclick="showUnit('unit4')">Unit 4: Linear Regression with Scikit-Learn</a></li>
+					<li><a href="javascript:void(0)" onclick="showUnit('unit5')">Unit 5: Clustering</a></li>
+					<li><a href="javascript:void(0)" onclick="showUnit('unit6')">Unit 6: Artificial Neural Networks</a></li>
+					<li><a href="javascript:void(0)" onclick="showUnit('unit7')">Unit 7: Convolutional Neural Networks</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
@@ -53,54 +71,25 @@
 			<!-- Main -->
 			<div id="main">
 
-				<!-- One -->
-				<section id="one" class="tiles">
-					<article>
-						<span class="image">
-							<img src="images/pic01.jpg" alt="Introduction to Machine Learning" />
-						</span>
-						<header class="major">
-							<h3><a href="#unit1" class="link">Unit 1: Introduction to Machine Learning</a></h3>
-							<p>An overview of machine learning concepts and techniques.</p>
-						</header>
-					</article>
-					<article>
-						<span class="image">
-							<img src="images/pic02.jpg" alt="Exploratory Data Analysis" />
-						</span>
-						<header class="major">
-							<h3><a href="#unit2" class="link">Unit 2: Exploratory Data Analysis</a></h3>
-							<p>Learn how to explore and prepare data for machine learning.</p>
-						</header>
-					</article>
-					<!-- Additional units can be added here following the same structure -->
-				</section>
-
 				<!-- Unit 1 Content -->
-				<section id="unit1">
+				<section id="unit1" class="unit-content">
 					<h2>Unit 1: Introduction to Machine Learning (ML)</h2>
 					<p>Welcome to Week 1.</p>
-					
 					<p>Machine learning (ML) has become an integral part of modern life. From online browsing to banking decisions, ML is used to make decisions and perform profiling. The availability of real-time big data facilitates the learning of ML algorithms, enabling machines to autonomously make more accurate decisions (Schwab & Zahid 2020).</p>
-					
 					<p>This week, we will explore the past, present, and future of ML, the challenges and opportunities of using algorithms, and the interplay between big data analytics, ML, and artificial intelligence (AI).</p>
-					
 					<h3>This week you will learn about:</h3>
 					<ul>
 						<li>The past, present, and future of machine learning.</li>
 						<li>Challenges and opportunities in using machine learning algorithms.</li>
 						<li>The relationship between big data, machine learning, and AI.</li>
 					</ul>
-
 					<h3>On completion of this week, you will be able to:</h3>
 					<ul>
 						<li>Understand the role of machine learning in future industries.</li>
 						<li>Identify the skills required to become proficient in machine learning.</li>
 						<li>Recognize the potential pitfalls of machine learning and how to address them.</li>
 					</ul>
-
 					<p>Ensure that your browser pop-ups are enabled to access the Lecturecasts for this module.</p>
-
 					<h3>Key Resources:</h3>
 					<ul>
 						<li><strong>Introduction to Machine Learning SCORM package:</strong> Use this package to access key learning materials.</li>
@@ -109,29 +98,46 @@
 						<li><strong>Module Wiki:</strong> As you progress, add new terms and concepts to the wiki to benefit the entire group.</li>
 						<li><strong>Google Colab:</strong> Familiarize yourself with this tool, which enables you to develop and train neural networks using TensorFlow. Practice the tutorials provided.</li>
 					</ul>
-
 					<h3>Collaborative Activities:</h3>
 					<ul>
 						<li><strong>Collaborative Discussion 1:</strong> Participate in the "4th Industrial Revolution" forum.</li>
 						<li><strong>Unit 1 Seminar:</strong> Attend the live seminar, review the Lecturecasts, and engage with the reading materials for this unit.</li>
 					</ul>
-
 					<h3>References:</h3>
 					<p>Schwab, K. & Zahid, F. (2020) ‘The Future of Jobs Report 2020’, <em>World Economic Forum</em>. Available at: <a href="https://www.weforum.org/reports/the-future-of-jobs-report-2020">https://www.weforum.org/reports/the-future-of-jobs-report-2020</a> (Accessed: 16 October 2024).</p>
 					<p>World Economic Forum (WEF) (2023) <em>The Future of Jobs Report 2023</em>. Available at: <a href="https://www.weforum.org/reports/the-future-of-jobs-report-2023">https://www.weforum.org/reports/the-future-of-jobs-report-2023</a> (Accessed: 16 October 2024).</p>
 				</section>
 
-				<!-- Two -->
-				<section id="two">
-					<div class="inner">
-						<header class="major">
-							<h2>Master Machine Learning</h2>
-						</header>
-						<p>This course will take you through the foundations of machine learning, from the basics of data exploration to advanced neural network architectures. Gain hands-on experience with Python libraries like Scikit-Learn, TensorFlow, and Keras.</p>
-						<ul class="actions">
-							<li><a href="#unit7" class="button next">Get Started</a></li>
-						</ul>
-					</div>
+				<!-- Unit 2 Content -->
+				<section id="unit2" class="unit-content">
+					<h2>Unit 2: Exploratory Data Analysis</h2>
+					<p>This unit focuses on techniques for understanding data before applying machine learning models. Exploratory Data Analysis (EDA) involves summarizing data sets, detecting patterns, and using visualization tools to gain insights. You will learn about libraries like Pandas and Matplotlib in Python to assist with EDA.</p>
+				</section>
+
+				<!-- Add content for remaining units -->
+				<section id="unit3" class="unit-content">
+					<h2>Unit 3: Correlation and Regression</h2>
+					<p>This unit focuses on understanding the relationships between variables and building predictive models using regression techniques. Learn how correlation works and how to apply linear and logistic regression models.</p>
+				</section>
+
+				<section id="unit4" class="unit-content">
+					<h2>Unit 4: Linear Regression with Scikit-Learn</h2>
+					<p>Learn how to implement linear regression models using Python’s Scikit-Learn library. This unit will teach you how to prepare data, fit a model, and evaluate its performance using real-world datasets.</p>
+				</section>
+
+				<section id="unit5" class="unit-content">
+					<h2>Unit 5: Clustering</h2>
+					<p>Clustering is an unsupervised learning technique used to group similar data points together. This unit will cover popular clustering algorithms such as K-Means and DBSCAN.</p>
+				</section>
+
+				<section id="unit6" class="unit-content">
+					<h2>Unit 6: Artificial Neural Networks</h2>
+					<p>Learn about artificial neural networks (ANNs), which mimic the brain’s structure and functionality. This unit will introduce the basic concepts of ANNs, including activation functions, layers, and backpropagation.</p>
+				</section>
+
+				<section id="unit7" class="unit-content">
+					<h2>Unit 7: Convolutional Neural Networks (CNNs)</h2>
+					<p>In this unit, you will learn about Convolutional Neural Networks (CNNs), a specialized type of neural network designed for image and video recognition. Learn how to build and train CNNs for various applications.</p>
 				</section>
 			</div>
 
