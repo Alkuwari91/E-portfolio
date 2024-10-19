@@ -1,208 +1,118 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Machine Learning Course</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Machine Learning Module Overview by Marwa Alkuwari">
+    <meta name="author" content="Marwa Alkuwari">
+    <title>Machine Learning Module Overview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+        }
 
-			<!-- Header -->
-			<header id="header" class="alt">
-				<a href="index.html" class="logo"><strong>Machine Learning Course</strong></a>
-				<nav>
-					<a href="#menu">Menu</a>
-				</nav>
-			</header>
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #007bff;
+        }
 
-			<!-- Menu -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="#unit1">Unit 1: Introduction to Machine Learning</a></li>
-					<li><a href="#unit2">Unit 2: Exploratory Data Analysis</a></li>
-					<li><a href="#unit3">Unit 3: Correlation and Regression</a></li>
-					<li><a href="#unit4">Unit 4: Linear Regression with Scikit-Learn</a></li>
-					<li><a href="#unit5">Unit 5: Clustering</a></li>
-					<li><a href="#unit6">Unit 6: Artificial Neural Networks</a></li>
-					<li><a href="#unit7">Unit 7: Convolutional Neural Networks</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+        h2 {
+            color: #343a40;
+        }
 
-			<!-- Banner -->
-			<section id="banner" class="major">
-				<div class="inner">
-					<header class="major">
-						<h1>Welcome to the Machine Learning Course</h1>
-					</header>
-					<div class="content">
-						<p>This course will guide you through essential machine learning concepts, from basic algorithms to advanced neural networks.</p>
-						<ul class="actions">
-							<li><a href="#one" class="button next scrolly">Get Started</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
+        .content-section {
+            margin-bottom: 40px;
+        }
 
-			<!-- Main -->
-			<div id="main">
+        .references {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
 
-				<!-- One -->
-				<section id="one" class="tiles">
-					<article>
-						<span class="image">
-							<img src="images/pic01.jpg" alt="Introduction to Machine Learning" />
-						</span>
-						<header class="major">
-							<h3><a href="#unit1" class="link">Unit 1: Introduction to Machine Learning</a></h3>
-							<p>An overview of machine learning concepts and techniques.</p>
-						</header>
-					</article>
-					<article>
-						<span class="image">
-							<img src="images/pic02.jpg" alt="Exploratory Data Analysis" />
-						</span>
-						<header class="major">
-							<h3><a href="#unit2" class="link">Unit 2: Exploratory Data Analysis</a></h3>
-							<p>Learn how to explore and prepare data for machine learning.</p>
-						</header>
-					</article>
-					<article>
-						<span class="image">
-							<img src="images/pic03.jpg" alt="Correlation and Regression" />
-						</span>
-						<header class="major">
-							<h3><a href="#unit3" class="link">Unit 3: Correlation and Regression</a></h3>
-							<p>Understand the relationships between variables and make predictions.</p>
-						</header>
-					</article>
-					<article>
-						<span class="image">
-							<img src="images/pic04.jpg" alt="Linear Regression with Scikit-Learn" />
-						</span>
-						<header class="major">
-							<h3><a href="#unit4" class="link">Unit 4: Linear Regression with Scikit-Learn</a></h3>
-							<p>Implement linear regression models using Python’s Scikit-Learn library.</p>
-						</header>
-					</article>
-					<article>
-						<span class="image">
-							<img src="images/pic05.jpg" alt="Clustering" />
-						</span>
-						<header class="major">
-							<h3><a href="#unit5" class="link">Unit 5: Clustering</a></h3>
-							<p>Discover unsupervised learning techniques to group data.</p>
-						</header>
-					</article>
-					<article>
-						<span class="image">
-							<img src="images/pic06.jpg" alt="Neural Networks" />
-						</span>
-						<header class="major">
-							<h3><a href="#unit6" class="link">Unit 6: Artificial Neural Networks</a></h3>
-							<p>Learn how artificial neural networks mimic the human brain.</p>
-						</header>
-					</article>
-				</section>
+        .references a {
+            color: #007bff;
+        }
 
-				<!-- Two -->
-				<section id="two">
-					<div class="inner">
-						<header class="major">
-							<h2>Master Machine Learning</h2>
-						</header>
-						<p>This course will take you through the foundations of machine learning, from the basics of data exploration to advanced neural network architectures. Gain hands-on experience with Python libraries like Scikit-Learn, TensorFlow, and Keras.</p>
-						<ul class="actions">
-							<li><a href="#unit7" class="button next">Get Started</a></li>
-						</ul>
-					</div>
-				</section>
-			</div>
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
 
-			<!-- Contact -->
-			<section id="contact">
-				<div class="inner">
-					<section>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field half">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name" />
-								</div>
-								<div class="field half">
-									<label for="email">Email</label>
-									<input type="text" name="email" id="email" />
-								</div>
-								<div class="field">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="6"></textarea>
-								</div>
-							</div>
-							<ul class="actions">
-								<li><input type="submit" value="Send Message" class="primary" /></li>
-								<li><input type="reset" value="Clear" /></li>
-							</ul>
-						</form>
-					</section>
-					<section class="split">
-						<section>
-							<div class="contact-method">
-								<span class="icon solid alt fa-envelope"></span>
-								<h3>Email</h3>
-								<a href="mailto:info@mlcourse.com">info@mlcourse.com</a>
-							</div>
-						</section>
-						<section>
-							<div class="contact-method">
-								<span class="icon solid alt fa-phone"></span>
-								<h3>Phone</h3>
-								<span>(123) 456-7890</span>
-							</div>
-						</section>
-						<section>
-							<div class="contact-method">
-								<span class="icon solid alt fa-home"></span>
-								<h3>Address</h3>
-								<span>1234 Machine Learning Road<br />
-								Technology City, ML 56789<br />
-								United States</span>
-							</div>
-						</section>
-					</section>
-				</div>
-			</section>
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Machine Learning Module Overview</h1>
 
-			<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Machine Learning Course. All rights reserved.</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
-		</div>
+        <div class="content-section">
+            <h2>Unit 1: Introduction to Machine Learning</h2>
+            <p>Machine learning is transforming industries by enabling machines to make autonomous decisions based on real-time data (Schwab & Zahid, 2020). It is widely used in areas like healthcare, finance, and e-commerce.</p>
+            <p><strong>Key Topics:</strong></p>
+            <ul>
+                <li>The history and evolution of machine learning.</li>
+                <li>Opportunities and challenges of using ML algorithms.</li>
+                <li>Interplay between big data, artificial intelligence (AI), and machine learning.</li>
+            </ul>
+            <p><strong>Learning Outcomes:</strong></p>
+            <ul>
+                <li>Understand the past, present, and future of ML.</li>
+                <li>Identify skill sets required for a successful career in ML.</li>
+                <li>Recognize the challenges associated with ML adoption.</li>
+            </ul>
+            <div class="references">
+                <strong>References:</strong>
+                <p>Schwab, K., & Zahid, S. (2020). <i>The Fourth Industrial Revolution</i>. Crown Publishing Group.<br>
+                World Economic Forum (WEF). (2023). <i>The Future of Jobs Report 2023</i>. Available <a href="https://www.weforum.org/reports/the-future-of-jobs-report-2023">here</a>.</p>
+            </div>
+        </div>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+        <div class="content-section">
+            <h2>Unit 2: Exploratory Data Analysis (EDA)</h2>
+            <p>EDA is a critical component in any data science or machine learning project. It helps data scientists identify trends, patterns, and anomalies within datasets (Patil, 2018).</p>
+            <p><strong>Key Topics:</strong></p>
+            <ul>
+                <li>Introduction to EDA and its importance in ML.</li>
+                <li>Feature exploration and anomaly detection.</li>
+                <li>Visual analysis of datasets.</li>
+            </ul>
+            <p><strong>Learning Outcomes:</strong></p>
+            <ul>
+                <li>Conduct basic EDA.</li>
+                <li>Identify key features in a dataset.</li>
+                <li>Prepare datasets for further analysis.</li>
+            </ul>
+            <div class="references">
+                <strong>References:</strong>
+                <p>Patil, P. (2018). <i>What is Exploratory Data Analysis?</i> Available <a href="https://towardsdatascience.com">here</a>.</p>
+            </div>
+        </div>
 
-	</body>
+        <!-- Additional units here following the same pattern -->
+
+        <footer>
+            <p>&copy; 2024 Marwa Alkuwari. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
